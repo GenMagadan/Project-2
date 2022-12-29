@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [opened]='this.isSidenavOpened'>
+    <mat-nav-list>
+      <a mat-list-item routerLink="page-1" routerLinkActive="mat-mdc-list-item-active" [routerLinkActiveOptions]="{exact:
+        true}">
+        <mat-icon matListItemIcon>home</mat-icon>
+        <!-- <h4 matListItemTitle>Моя страница</h4> -->
+        <span matListItemTitle>Главная</span>
+      </a>
+      <a mat-list-item routerLink="books" routerLinkActive="mat-mdc-list-item-active" [routerLinkActiveOptions]="{exact:
+        true}">
+        <mat-icon matListItemIcon>mode_comment</mat-icon>
+        <!-- <h4 matListItemTitle>Сообщения</h4> -->
+        <span matListItemTitle>Книги</span>
+      </a>
+      <a mat-list-item routerLink="page-3" routerLinkActive="mat-mdc-list-item-active" [routerLinkActiveOptions]="{exact:
+        true}">
+        <mat-icon matListItemIcon>people</mat-icon>
+        <!-- <h4 matListItemTitle>Сообщения</h4> -->
+        <span matListItemTitle>Друзья</span>
+      </a>
+      <a mat-list-item routerLink="page-4" routerLinkActive="mat-mdc-list-item-active" [routerLinkActiveOptions]="{exact:
+        true}">
+        <mat-icon matListItemIcon>photo_camera</mat-icon>
+        <!-- <h4 matListItemTitle>Сообщения</h4> -->
+        <span matListItemTitle>Фотографии</span>
+      </a>
+      <a mat-list-item routerLink="page-5" routerLinkActive="mat-mdc-list-item-active" [routerLinkActiveOptions]="{exact:
+        true}">
+        <mat-icon matListItemIcon>videocam</mat-icon>
+        <!-- <h4 matListItemTitle>Сообщения</h4> -->
+        <span matListItemTitle>Видео</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <button mat-raised-button color="primary" (click)="toggleSidenav()">test button</button> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

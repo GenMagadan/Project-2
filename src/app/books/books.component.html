@@ -1,0 +1,6 @@
+<h1>Книжечки</h1>
+
+<div *ngFor="let book of bookService.getList() | async">
+   {{getAuthorLabel(book.author)}}: {{getBookLabel(book)}}
+   <!-- {{book.author | author}}: {{getBookLabel(book)}} -->
+</div>

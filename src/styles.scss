@@ -1,0 +1,52 @@
+@use '@angular/material' as mat;
+
+@use 'scss/theme/theme';
+@use 'scss/theme/tokens';
+@use 'scss/theme/colors';
+@use 'scss/theme/typography';
+
+
+
+@include mat.core();
+
+$project_2-primary: mat.define-palette(mat.$lime-palette);
+$project_2-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$project_2-warn: mat.define-palette(mat.$red-palette);
+
+$project_2-theme: mat.define-light-theme((color: (primary: $project_2-primary,
+        accent: $project_2-accent,
+        warn: $project_2-warn,
+      )));
+
+@include mat.all-component-themes($project_2-theme);
+
+.material-symbols-rounded {
+  font-variation-settings:
+    'FILL' var(--symbol-fill, 0),
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+:root,
+::after,
+::before {
+  @include tokens.tokens;
+  @include theme.init;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  background-color: colors.background();
+  color: colors.on-background();
+}
+
+@import 'scss/mat-sidenav';
